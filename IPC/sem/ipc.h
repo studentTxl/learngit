@@ -3,7 +3,7 @@
     > Author: tongxianglong
     > Mail: studentTxl@163.com 
     > Created Time: Sun 29 Oct 2017 12:07:40 PM CST
- *************************************************************************
+ *************************************************************************/
 
 
 #include<stdio.h>
@@ -24,7 +24,7 @@ union semun
 //////////////////////////////////////////////////
 //1  ftok
 
-key_t Ftok(const char *pathname, int pro_id)
+key_t Ftok(const char *pathname, int proj_id)
 {
 	key_t key = ftok(pathname, proj_id);
 	if(key == -1)

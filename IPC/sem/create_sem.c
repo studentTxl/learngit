@@ -1,4 +1,4 @@
-#include"../ipc.h"
+#include"ipc.h"
 #include<sys/sem.h>
 
 // ./create_sem mysem 0xff n
@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	key_t sem_key = Ftok(argv[1], atoi(argv[2]));
 	printf("sem key = %x\n", sem_key);
 
-	ini sem_id = Semget(sem_key, 1, IPC_CREAT|IPC_EXCL|0755);
+	int  sem_id = Semget(sem_key, 1, IPC_CREAT|IPC_EXCL|0755);
 	printf("sem id = %d\n", sem_id);
 
 	union semun init;
