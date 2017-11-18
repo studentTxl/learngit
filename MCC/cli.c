@@ -24,7 +24,7 @@ int main()
     struct sockaddr_in addrCli;
     addrCli.sin_family = AF_INET;
     //addrCli.sin_port = htons(9090);
-    addrCli.sin_addr.s_addr = inet_addr("192.168.1.50");
+    addrCli.sin_addr.s_addr = inet_addr("127.0.0.1");
     socklen_t len = sizeof(struct sockaddr);
     int ret = bind(sockCli, (struct sockaddr*)&addrCli, len);
     if(ret == -1)
